@@ -1,0 +1,171 @@
+\documentclass[a4paper,11pt]{article}
+
+\frenchspacing
+%\usepackage[finnish]{babel}
+%\usepackage[utf8x]{inputenc}
+\usepackage{graphicx}
+\graphicspath{{img/}}
+\usepackage{tikz}
+%\usepackage[T1]{fontenc}
+\usepackage{url}
+\usepackage{cite}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{dirtree, array}
+\usepackage{appendix}
+\usepackage[ddmmyyyy]{datetime}
+\renewcommand{\dateseparator}{.}
+%\usepackage[sorting=none]{biblatex}
+\usepackage{./placeins/placeins} % prevents the floats from passing a FloatBarrier
+%% Define a new 'leo' style for the package that will use a smaller font.
+\makeatletter
+\def\url@leostyle{%
+  \@ifundefined{selectfont}{\def\UrlFont{\sf}}{\def\UrlFont{\small\ttfamily}}}
+\makeatother
+%% Now actually use the newly defined style.
+\urlstyle{leo}
+\begin{document}
+
+\begin{titlepage}
+\pagestyle{empty}
+\begin{center}
+
+\vspace*{3cm}
+\noindent\LARGE{\textbf{
+%
+%*******************************************************
+%Title:
+Polygraph implementation using Arduino microcontroller board
+%*******************************************************
+%
+}}
+\\
+\vspace*{1cm}
+\large{
+\begin{tabular}{l l}
+%
+%*******************************************************
+%Author:
+Henrik Lindblom & 67558R \\
+Anne Vainio & 66535U \\
+Aki Kauppinen & 12345A
+%*******************************************************
+%
+\end{tabular}
+
+\vspace*{1cm}
+\begin{tabular}{l l}
+Date & \textbf{
+%
+%*******************************************************
+% Date
+\today 
+%*******************************************************
+%
+}
+\end{tabular}
+}
+\end{center}
+\end{titlepage}
+%kansilehti loppuu 
+\pagenumbering{roman}
+\tableofcontents
+\newpage
+\pagenumbering{arabic}
+%Varsinainan selkkari alkaa
+\section{General}
+\begin{figure}[htb]
+  \includegraphics[width=\textwidth]{pipelining2}
+  %% \centering
+  %% \def\svgwidth{\columnwidth}
+  %% \input{img/pipelining.pdf_tex}
+  \caption{Pipelining}
+  \label{fig:pipelining}
+\end{figure}
+\begin{enumerate}
+\item Queue name
+\item Queue data type
+\end{enumerate}
+\subsection{UI} \label{section:UI}
+The design inputs to the user interface were:
+\begin{enumerate}
+\item Low latency response
+\item Low overhead.
+\end{enumerate}
+\subsection{Error Handling} \label{section:error-handling}
+\begin{enumerate}
+\item Create an error case to the command typedef
+\item Create an user event which can bubble up to the event structure.
+\end{enumerate}
+\nameref{section:UI} which actually handles the error. The user event data
+\pagebreak
+\begin{equation}
+  e \propto ||\nabla T|| \propto \frac{\partial T}{\partial t}.
+\end{equation}
+The proportionality coefficients are calculated using the linear
+regression model
+\begin{align}
+  \mbox{MEAS} &= \alpha_1T_1 + \alpha_2\frac{\partial T_1}{\partial t} +
+  \alpha_0 \\
+  \mbox{REF} &= \beta_1T_2 + \beta_2\frac{\partial T_2}{\partial t} + \beta_0
+\end{align}
+\begin{align}
+  \mbox{MEAS}_{comp} &= \mbox{MEAS} - \alpha_1T_1
+  -\alpha_2\frac{\partial T_1}{\partial t} \\
+  \mbox{REF}_{comp} &= \mbox{REF} - \beta_1T_2 - \beta_2\frac{\partial T_2}{\partial t}.
+\end{align}
+
+\subsubsection{Time derivative}
+\begin{figure}[htb]
+  \includegraphics[width=\textwidth]{dataflow}
+  \caption{Program dataflow chart. Arrows indicate direction of data flow,
+    not dependance or sequentiality.}
+  \label{fig:dataflow}
+\end{figure}
+
+\begin{figure}[htb]
+  \includegraphics[width=\textwidth]{block-diagram-map}
+  \caption{Block diagram functional components}
+  \label{fig:block-diag-map}
+\end{figure}
+
+%Kirjallisuuviitteet
+\bibliography{bibliography}
+\bibliographystyle{unsrt}
+
+\appendix
+\appendixpage
+\addappheadtotoc
+\section{Directory listing}
+
+\begin{tabular}{l l}
+%% \hline
+%% \multicolumn{1}{c} {Heading 1} & \multicolumn{1}{c} {Heading 2} \\
+%\hline
+\begin{minipage}{0.3\linewidth}\dirtree{%
+.1 mims-project.
+.2 data. 
+.2 docs. 
+.2 helpers. 
+.2 test. 
+.2 typedefs. 
+.2 utilities. 
+.2 main.vi. 
+}\end{minipage}
+&
+\DTsetlength{0pt}{0pt}{0pt}{0pt}{0pt}
+\begin{minipage}{0.7\linewidth}\dirtree{%
+.1 Root directory.
+.2 Contains sensor-configurations.ini.
+.2 Documents related to the sensor hardware.
+.2 Some helpfull functions.
+.2 Unit \& other tests.
+.2 Controls and clusters used by the program.
+.2 Functions for performing more complex tasks.
+.2 The main program.
+}\end{minipage}
+\\
+%\hline
+\end{tabular}
+
+\end{document}

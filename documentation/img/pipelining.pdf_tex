@@ -1,0 +1,61 @@
+%% Creator: Inkscape 0.48.2, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'pipelining.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{992.12597656bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.51428573)%
+    \put(0,0){\includegraphics[width=\unitlength]{pipelining.pdf}}%
+    \put(0.55847953,0.00933585){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Time}}}%
+    \put(0.07602339,0.22278614){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Thread 3}}}%
+    \put(0.07602339,0.10582707){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Thread 4}}}%
+    \put(0.07602339,0.3401107){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Thread 2}}}%
+    \put(0.07602339,0.45633877){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Thread 1}}}%
+    \put(0.05105994,0.16364869){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{CPU2}}}%
+    \put(0.05105994,0.39756685){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{CPU1}}}%
+  \end{picture}%
+\endgroup%
