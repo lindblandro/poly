@@ -21,3 +21,9 @@ and/or Dia. The former is extremely flexible graphics software with
 somewhat steep learning curve and the latter is good mainly for
 creating diagrams and is kind of an open source version of Office
 Visio.
+
+Source Code
+===========
+
+All the source code should go in source/ in a proper, descriptive
+subdirectory.
