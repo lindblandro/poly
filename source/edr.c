@@ -8,12 +8,12 @@ serial monitor.
 
 // the setup routine runs once when you press reset:
 void setup() {
-  // initialize serial communication at 9600 bits per second:
-  Serial.begin(9600);
+    // initialize serial communication at 9600 bits per second:
+    Serial.begin(9600);
 }
 
 float EDRvalue = 0;
-float gain=1;
+float gain = 1;
 
 // the loop routine runs over and over again forever:
 void loop() {
@@ -24,10 +24,10 @@ void loop() {
   // print out the value you read:
   Serial.println(voltage);
   if (voltage > EDRvalue){
-  gain=gain-0.01;
+      gain = gain-0.01;
   }
   if (voltage < EDRvalue){
-  gain=gain+0.01;
+      gain = gain+0.01;
   }
   EDRvalue = voltage;
 }
